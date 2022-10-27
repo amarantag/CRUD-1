@@ -14,8 +14,8 @@
             <section id="formContainer">
                 <form>
                     <div>
-                        <label for="inNickName">Nombre de usuario</label>
-                        <input id="inNickName" type="text" placeholder="nickname">
+                        <label for="inNickname">Nombre de usuario</label>
+                        <input id="inNickname" type="text" placeholder="nickname">
                     </div>
                     <div>
                         <label for="inEmail">Correo Electrónico</label>
@@ -31,7 +31,18 @@
                 </form>
             </section>
             <div class="tableContainer">    
-                Este es el div de mostrar
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre de usuario</th>
+                            <th>Correo electrónico</th>
+                            <th>Contraseña</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
             </div>
         </main>
     <script src="./app.js" ></script>
