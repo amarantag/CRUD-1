@@ -92,8 +92,28 @@ function actualizar(e){
     btnUI.style.display = 'none'
     btnUI2.style.display = 'block'
 
+    referencia = datos[index].id
+
 }
 
-function actualizar2(){
+function actualizar2(e){
+    e.preventDefault()
 
+    let objUsuario = {
+        nickname: nicknameUI.value,
+        email: emailUI.value,
+        password: passwordUI.value,
+        id: referencia,
+    }
+
+    let datos = JSON.parse(localStorage.getItem('DB'));
+    let index = datos.findIndex(element => element.id == objUsuario.id)
+    
+    datos.splice(index, 1, objUsuario)
+
+    localStorage.setItem('DB', JSON.stringify(datos));
+
+    pintar();
+
+    formularioUI.reset()
 }
